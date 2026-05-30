@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Ibile Car Brand</title>
+    <style>
+        /* --- CSS STYLING --- */
+        :root {
+            --bg-deep: #050505;
+            --accent-blue: #007cf0;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Animated Background Glows */
+        .orb {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--accent-blue) 0%, transparent 70%);
+            filter: blur(80px);
+            opacity: 0.15;
+            z-index: -1;
+            animation: float 10s infinite alternate;
+        }
+
+        @keyframes float {
+            from { transform: translate(-20%, -20%); }
+            to { transform: translate(20%, 20%); }
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .header-section h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .header-section p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+
+        /* Communication Channels */
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .contact-item:hover {
+            background: rgba(0, 124, 240, 0.1);
+            border-color: var(--accent-blue);
+            transform: scale(1.02);
+        }
+
+        .label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        .value {
+            color: var(--accent-blue);
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0, 255, 136, 0.1);
+            color: #00ff88;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        .pulse {
+            width: 8px;
+            height: 8px;
+            background: #00ff88;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff88;
+            animation: pulse-animation 2s infinite;
+        }
+
+        @keyframes pulse-animation {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 255, 136, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
+        }
+
+        .footer-note {
+            margin-top: 25px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="orb"></div>
+
+    <div class="contact-card">
+        <div class="header-section">
+            <h2>Contact Me 📲</h2>
+            <p>Thanks for visiting <strong>Ibile Car Brand</strong>. Reach out via any of the channels below for inquiries.</p>
+        </div>
+
+        <div class="contact-list">
+            <a href="https://wa.me/2349124302813" target="_blank" class="contact-item">
+                <span class="label">🟢 WhatsApp</span>
+                <span class="value">09124302813</span>
+            </a>
+
+            <a href="https://www.tiktok.com/@ibileog1837" target="_blank" class="contact-item">
+                <span class="label">🎵 TikTok</span>
+                <span class="value">@ibileog1837</span>
+            </a>
+
+            <a href="https://t.me/Nancy7867sfx" target="_blank" class="contact-item">
+                <span class="label">✈️ Telegram</span>
+                <span class="value">Nancy7867sfx</span>
+            </a>
+        </div>
+
+        <div class="status-badge">
+            <div class="pulse"></div> Online & Ready for you
+        </div>
+
+        <p class="footer-note">Providing high-end Mercedes-Benz solutions in Abuja and beyond.</p>
+    </div>
+
+    <script>
+        // Log a professional greeting in the console
+        console.log("Ibile Car Brand Contact System Active.");
+
+        // Add a slight tilt effect on mouse move
+        const card = document.querySelector('.contact-card');
+        document.addEventListener('mousemove', (e) => {
+            let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+            let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+    </script>
+
+</body>
+  </html>
