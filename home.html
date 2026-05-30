@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibile Car Brand | Mercedes-Benz Specialist</title>
+    <style>
+        /* --- CSS STYLING (Dark Theme & Blue Accents) --- */
+        :root {
+            --deep-bg: #05070a;
+            --card-bg: #0f172a;
+            --electric-blue: #3b82f6;
+            --soft-blue: #60a5fa;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--deep-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Live Purchase Ticker */
+        #top-ticker {
+            background: #000;
+            color: var(--electric-blue);
+            padding: 10px;
+            text-align: center;
+            font-size: 0.85rem;
+            border-bottom: 1px solid #1e293b;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        header {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, #000, var(--deep-bg));
+            border-bottom: 2px solid var(--electric-blue);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 4px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .location-tag {
+            color: var(--soft-blue);
+            font-size: 1.1rem;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* Marketplace Grid */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .marketplace {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .car-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #1e293b;
+            transition: 0.4s;
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--electric-blue);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .car-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .car-info { padding: 25px; }
+
+        .price {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--electric-blue);
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        /* Registration Form Section */
+        .auth-section {
+            background: #0a0f1a;
+            padding: 60px 20px;
+            margin-top: 80px;
+            border-top: 1px solid #1e293b;
+        }
+
+        .form-container {
+            max-width: 450px;
+            margin: 0 auto;
+            background: #000;
+            padding: 40px;
+            border-radius: 10px;
+            border-left: 4px solid var(--electric-blue);
+        }
+
+        .form-container h2 { margin-top: 0; }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px 0;
+            background: #111;
+            border: 1px solid #333;
+            color: #fff;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--electric-blue);
+        }
+
+        .btn-main {
+            width: 100%;
+            padding: 15px;
+            background: var(--electric-blue);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn-main:hover {
+            background: var(--soft-blue);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="top-ticker">
+        <span id="ticker-text">Connecting to Ibile Secure Server...</span>
+    </div>
+
+    <header>
+        <h1>IBILE CAR BRAND</h1>
+        <span class="location-tag">Abuja, Nigeria — Area 11 Branch</span>
+        <p style="color: #94a3b8; max-width: 600px; margin: 20px auto;">Welcome to Nigeria's premier destination for Mercedes-Benz. Luxury, performance, and integrity.</p>
+    </header>
+
+    <div class="container">
+        <h2 style="border-left: 4px solid var(--electric-blue); padding-left: 15px;">Available Inventory</h2>
+        <div class="marketplace">
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=600" class="car-img" alt="Mercedes">
+                <div class="car-info">
+                    <h3>Mercedes-AMG GT</h3>
+                    <span class="price">₦145,000,000</span>
+                    <button class="btn-main" onclick="alert('Proceeding to Checkout...')">Purchase with Credits</button>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1541443131876-44b03de101c5?auto=format&fit=crop&w=600" class="car-img" alt="Mercedes">
+                <div class="car-info">
+                    <h3>G-Wagon G63</h3>
+                    <span class="price">₦220,000,000</span>
+                    <button class="btn-main" onclick="alert('Proceeding to Checkout...')">Purchase with Credits</button>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="https://images.unsplash.com/photo-1553260162-710144246944?auto=format&fit=crop&w=600" class="car-img" alt="Mercedes">
+                <div class="car-info">
+                    <h3>S-Class Maybach</h3>
+                    <span class="price">₦180,000,000</span>
+                    <button class="btn-main" onclick="alert('Proceeding to Checkout...')">Purchase with Credits</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="auth-section">
+        <div class="form-container">
+            <h2>Join the Branch</h2>
+            <p style="color: #888; font-size: 0.9rem;">Register to access per-credit purchasing.</p>
+            
+            <form id="regForm">
+                <label>Full Name</label>
+                <input type="text" placeholder="John Doe" required>
+
+                <label>Email Address</label>
+                <input type="email" placeholder="john@example.com" required>
+
+                <label>Phone Number</label>
+                <input type="tel" placeholder="+234..." required>
+
+                <label>Password</label>
+                <input type="password" placeholder="••••••••" required>
+
+                <button type="submit" class="btn-main">Create Account / Login</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Ibile Car Brand | Area 11, Abuja, Nigeria.
+    </footer>
+
+    <script>
+        // --- JAVASCRIPT FOR DYNAMIC TICKER ---
+        const ticker = document.getElementById('ticker-text');
+        const states = ["Lagos", "Abuja", "Port Harcourt", "Kano", "Enugu"];
+        const cars = ["G-Wagon", "S-Class", "AMG GT", "GLC 300"];
+
+        function updateTicker() {
+            const randomState = states[Math.floor(Math.random() * states.length)];
+            const randomCar = cars[Math.floor(Math.random() * cars.length)];
+            const randomPrice = (Math.floor(Math.random() * 10) + 1) * 10; // Simple credit simulation
+            
+            ticker.style.opacity = '0';
+            setTimeout(() => {
+                ticker.innerHTML = `LATEST: Client in <strong>${randomState}</strong> purchased a <strong>${randomCar}</strong> using <strong>${randomPrice} Credits</strong>`;
+                ticker.style.opacity = '1';
+            }, 500);
+        }
+
+        setInterval(updateTicker, 5000);
+        updateTicker();
+
+        // Form handling
+        document.getElementById('regForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Registration successful! Welcome to Ibile Car Brand Abuja.");
+        });
+    </script>
+
+</body>
+</html>
