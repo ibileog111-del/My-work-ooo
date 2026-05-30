@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Ibile Car Brand</title>
+    <style>
+        /* --- CSS STYLING --- */
+        :root {
+            --bg-dark: #050505;
+            --card-blue: #0a192f;
+            --electric-blue: #007cf0;
+            --text-light: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Background Glow Effect */
+        .glow {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--electric-blue);
+            filter: blur(150px);
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .about-card {
+            background: var(--card-blue);
+            width: 90%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .profile-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            display: inline-block;
+            background: rgba(0, 124, 240, 0.1);
+            padding: 20px;
+            border-radius: 50%;
+            border: 2px solid var(--electric-blue);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, var(--electric-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .statement {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        .highlight {
+            color: var(--electric-blue);
+            font-weight: bold;
+        }
+
+        /* Guarantee Badge */
+        .guarantee-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px dashed var(--electric-blue);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .guarantee-box h3 {
+            margin: 0;
+            color: #00ff88; /* Success Green */
+            font-size: 1.2rem;
+        }
+
+        /* Interactive Button */
+        .btn-contact {
+            margin-top: 30px;
+            padding: 15px 35px;
+            background: var(--electric-blue);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-contact:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--electric-blue);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow"></div>
+
+    <div class="about-card">
+        <div class="profile-icon">🚗</div>
+        
+        <h1 id="greeting">Hello 👋</h1>
+        
+        <p class="statement">
+            Welcome to my <span class="highlight">Mercedes-Benz</span> brand website! 
+            I provide any kind of Mercedes-Benz you want—from luxury sedans to high-performance SUVs. 
+            Whatever model you are looking for, I have it ready for you.
+        </p>
+
+        <p class="statement">
+            My company is built on being <span class="highlight">Trustworthy & Reliable 😉</span>. 
+            Your satisfaction is my priority.
+        </p>
+
+        <div class="guarantee-box">
+            <h3>🛡️ 2-Year Guarantee</h3>
+            <p style="margin: 5px 0 0 0; font-size: 0.9rem;">Included with every vehicle purchase.</p>
+        </div>
+
+        <button class="btn-contact" onclick="celebrate()">Contact Me Now</button>
+
+        <footer>
+            Thanks for coming to our Abuja Area 11 Branch.
+        </footer>
+    </div>
+
+    <script>
+        // Simple interactive greeting logic
+        const greeting = document.getElementById('greeting');
+        const hour = new Date().getHours();
+
+        if (hour < 12) greeting.innerHTML = "Good Morning 👋";
+        else if (hour < 18) greeting.innerHTML = "Good Afternoon 👋";
+        else greeting.innerHTML = "Good Evening 👋";
+
+        // Button Click Animation
+        function celebrate() {
+            alert("Thank you for your trust! Redirecting you to our Mercedes Inventory...");
+            // You can add a link here like: window.location.href = 'market.html';
+        }
+    </script>
+
+</body>
+</html>
